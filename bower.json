@@ -1,0 +1,19 @@
+{
+  "name": "millepplgemastik",
+  "version": "0.0.0",
+  "homepage": "https://github.com/willy2706/millepplgemastik",
+  "authors": [
+    "willy <willylie2706@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.4.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
