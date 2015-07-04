@@ -8,9 +8,9 @@
   "license": "MIT",
   "dependencies": {
     "angular": "1.4.1",
-    "angular-ui-router" :  "0.2.15",
+    "angular-ui-router": "0.2.15",
     "jquery": "2.1.1",
-    "Materialize" : "*"
+    "materialize": "0.97.0"
   },
   "ignore": [
     "**/.*",
