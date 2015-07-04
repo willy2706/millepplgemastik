@@ -28,8 +28,7 @@
     -->
 
     <!--STYLES-->
-    <link rel="stylesheet" href="assets/styles/css/materialize.css">
-    <link rel="stylesheet" href="assets/styles/css/materialize.min.css">
+    <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css">
     <link rel="stylesheet" href="assets/styles/css/style.css">
     <!-- TODO -->
     <!-- <link rel="stylesheet" href="assets/styles/importer.css"> -->
@@ -43,36 +42,115 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="app/js/app.js"></script>
     <script type="text/javascript" src="app/js/route.js"></script>
-    <script src="assets/js/materialize/materialize.js"></script>
-    <script src="assets/js/materialize/materialize.min.js"></script>
+    <script src="bower_components/materialize/dist/js/materialize.js"></script>
     <!--SCRIPTS END-->
   </head>
-
-  <body ng-app="milleApp">
+  <body>
     <div class="navbar-fixed">
       <nav>
         <div class="container">
           <div class="nav-wrapper">
             <a href="/" class="brand-logo">Logo</a>
-            <ul class="right hide-on-med-and-down">
-              <li><a href="/dashboard">Dashboard</a></li>
-              <li><a href="/products">Products</a></li>
-              <li><a href="/categories">Categories</a></li>
-              <li><a class="dropdown-button" href="#" data-activates="marketplace">Marketplaces<i class="material-icons right">arrow_drop_down</i></a></li>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="#">Home</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#team">The Team</a></li>
+              <li><a class="dropdown-button" href="#" data-activates="login">Log In<i class="material-icons right">arrow_drop_down</i></a></li>
+              <script type="text/javascript">
+                $(function () {
+                  $('.dropdown-button').hover(function() {
+                    $('.login-banner').show()
+                  }, function () {
+                    $('.login-banner').hide()
+                  })
+                })
+              </script>
             </ul>
           </div>
         </div>
       </nav>
     </div>
 
-    <ul id="marketplace" class="dropdown-content">
-      <li><a href="/marketplaces/lazada">Lazada Indonesia</a></li>
-      <li><a href="/marketplaces/tokopedia">Tokopedia</a></li>
-      <li><a href="/marketplaces/bukalapak">Bukalapak</a></li>
-    </ul>
+    <div class="row login-banner">
+      <form class="col s12 l6 offset-l6">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="username" type="text" class="validate">
+            <label for="username">Username</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s6">
+            <button class="btn waves-effect waves-light teal" type="submit" name="action">Log In</button>
+          </div>
+          <div class="col s6">
+            <input type="checkbox" id="remember_me" checked="checked" />
+            <label for="remember_me">Remember me?</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+          <div class="caption center-align">
+            <h3>This is our big Tagline!</h3>
+            <h5 class="light pink-text text-lighten-3">Here's our small slogan.</h5>
+          </div>
+        </li>
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+          <div class="caption left-align">
+            <h3>Left Aligned Caption</h3>
+            <h5 class="light pink-text text-lighten-3">Here's our small slogan.</h5>
+          </div>
+        </li>
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+          <div class="caption right-align">
+            <h3>Right Aligned Caption</h3>
+            <h5 class="light pink-text text-lighten-3">Here's our small slogan.</h5>
+          </div>
+        </li>
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+          <div class="caption center-align">
+            <h3>This is our big Tagline!</h3>
+            <h5 class="light pink-text text-lighten-3">Here's our small slogan.</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
 
-    <div ui-view></div>
-    put body here
+    <div class="container">
+        <section id="features">
+            <div class="row center">
+                <div class="col s12 m4">
+                    <i class="medium deep-purple-text material-icons">trending_up</i>
+                    <h5>Lazada Indonesia</h5>
+                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col s12 m4">
+                    <i class="medium deep-purple-text material-icons">trending_flat</i>
+                    <h5>Tokopedia</h5>
+                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col s12 m4">
+                    <i class="medium deep-purple-text material-icons">trending_down</i>
+                    <h5>Bukalapak</h5>
+                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <footer class="page-footer">
       <div class="container">
@@ -86,6 +164,8 @@
             <ul>
               <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
               <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
             </ul>
           </div>
         </div>
@@ -93,7 +173,7 @@
       <div class="footer-copyright">
         <div class="container">
           © 2015 Mille-feuille
-          <div class="right">All Rights Reserved.</a>
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
       </div>
     </footer>
@@ -146,5 +226,11 @@
           + Use a different preprocessor, like TypeScript
 
     -->
+    
+    <script>
+      $(document).ready(function() {
+        $('.slider').slider({full_width: true});
+      });
+    </script>
   </body>
 </html>

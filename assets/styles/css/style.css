@@ -7,3 +7,11 @@ font-family: 'Roboto', sans-serif;
 .bold {
 	font-weight: 700;
 }
+
+.login-banner {
+	display: none;
+}
+
+.login-banner:hover {
+	display: block;
+}
