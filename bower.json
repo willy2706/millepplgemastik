@@ -10,7 +10,9 @@
     "angular": "1.4.1",
     "angular-ui-router": "0.2.15",
     "jquery": "2.1.1",
-    "materialize": "0.97.0"
+    "materialize": "0.97.0",
+    "bootstrap": ">= 3.0.0",
+    "yamm3" : "1.1.0"
   },
   "ignore": [
     "**/.*",

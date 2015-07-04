@@ -1,0 +1,17 @@
+font-family: 'Roboto', sans-serif;
+
+.medium {
+	.font-weight: 500;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.login-banner {
+	display: none;
+}
+
+.login-banner:hover {
+	display: block;
+}
