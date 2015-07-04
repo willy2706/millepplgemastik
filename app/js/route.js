@@ -2,8 +2,7 @@ var milleRoutes = angular.module('milleApp.routes', []);
 
 milleRoutes.config(['$stateProvider', '$urlRouterProvider', 
   function($stateProvider, $urlRouterProvider, $scope) {
-    // $urlRouterProvider.when('', '/');
-    $urlRouterProvider.otherwise('/');
+    // $urlRouterProvider.when('', '/')
     $stateProvider
       .state('product-add', {
         url: '/product-add',

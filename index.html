@@ -41,11 +41,12 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="app/js/app.js"></script>
+    <script type="text/javascript" src="app/js/controller/bodyCtrl.js"></script>
     <script type="text/javascript" src="app/js/route.js"></script>
     <script src="bower_components/materialize/dist/js/materialize.js"></script>
     <!--SCRIPTS END-->
   </head>
-  <body>
+  <body ng-app = "milleApp" ng-controller="bodyCtrl">
     <div class="navbar-fixed">
       <nav>
         <div class="container">
@@ -59,6 +60,11 @@
               <script type="text/javascript">
                 $(function () {
                   $('.dropdown-button').hover(function() {
+                    $('.login-banner').show()
+                  }, function () {
+                    $('.login-banner').hide()
+                  })
+                  $('.login-banner').hover(function () {
                     $('.login-banner').show()
                   }, function () {
                     $('.login-banner').hide()
@@ -96,8 +102,7 @@
         </div>
       </form>
     </div>
-    
-    <div class="slider">
+    <div class="slider" ng-show = "isGuest">
       <ul class="slides">
         <li>
           <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
@@ -129,24 +134,22 @@
         </li>
       </ul>
     </div>
+    <div ui-view></div>
 
     <div class="container">
         <section id="features">
             <div class="row center">
                 <div class="col s12 m4">
-                    <i class="medium deep-purple-text material-icons">trending_up</i>
-                    <h5>Lazada Indonesia</h5>
-                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h5><a href="http://lazada.co.id">Lazada Indonesia</a></h5>
+                    <p class="light">Lazada.co.id merupakan bagian dari Lazada Group yang menjadi tujuan belanja online nomor satu di Asia Tenggara. Lazada Group beroperasi di Indonesia, Malaysia, Filipina, Singapura, Thailand dan Vietnam. Menjadi pionir di bidang e-commerce, Lazada menghadirkan layanan berbelanja yang mudah bagi konsumen dan akses langsung pada database konsumen terbesar di Asia Tenggara.</p>
                 </div>
                 <div class="col s12 m4">
-                    <i class="medium deep-purple-text material-icons">trending_flat</i>
-                    <h5>Tokopedia</h5>
-                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h5><a href="http://tokopedia.com">Tokopedia</a></h5>
+                    <p class="light">Tokopedia merupakan perusahaan internet pertama asal Asia Tenggara yang berhasil mendapatkan kepercayaan pendanaan sebesar 100 juta Dollar dari SoftBank dan Sequoia Capital. SoftBank merupakan investor di balik kesuksesan Alibaba, sementara Sequoia Capital merupakan investor di balik kesuksesan Apple & Google.</p>
                 </div>
                 <div class="col s12 m4">
-                    <i class="medium deep-purple-text material-icons">trending_down</i>
-                    <h5>Bukalapak</h5>
-                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h5><a href="http://bukalapak.com">Bukalapak</a></h5>
+                    <p class="light">Bukalapak merupakan salah satu online marketplace terkemuka di Indonesia. Seperti halnya situs layanan jual-beli menyediakan sarana jual-beli dari konsumen ke konsumen. Siapa pun dapat membuka toko online di Bukalapak dan melayani pembeli dari seluruh Indonesia untuk transaksi satuan maupun banyak.</p>
                 </div>
             </div>
         </section>
@@ -172,8 +175,8 @@
       </div>
       <div class="footer-copyright">
         <div class="container">
-          © 2015 Mille-feuille
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          &copy; 2015 Mille-feuille
+          <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
         </div>
       </div>
     </footer>
