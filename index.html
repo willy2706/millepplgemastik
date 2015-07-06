@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>New Sails App</title>
+    <title>Mille</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -56,21 +56,24 @@
               <li><a href="#">Home</a></li>
               <li><a href="#features">Features</a></li>
               <li><a href="#team">The Team</a></li>
-              <li><a class="dropdown-button" href="#" data-activates="login">Log In<i class="material-icons right">arrow_drop_down</i></a></li>
-              <script type="text/javascript">
-                $(function () {
-                  $('.dropdown-button').hover(function() {
-                    $('.login-banner').show()
-                  }, function () {
-                    $('.login-banner').hide()
+              <li ng-if="isGuest">
+                <a class="dropdown-button" href="#" data-activates="login">Log In<i class="material-icons right">arrow_drop_down</i></a>
+                <script type="text/javascript">
+                  $(function () {
+                    $('.dropdown-button').hover(function() {
+                      $('.login-banner').show()
+                    }, function () {
+                      $('.login-banner').hide()
+                    })
+                    $('.login-banner').hover(function () {
+                      $('.login-banner').show()
+                    }, function () {
+                      $('.login-banner').hide()
+                    })
                   })
-                  $('.login-banner').hover(function () {
-                    $('.login-banner').show()
-                  }, function () {
-                    $('.login-banner').hide()
-                  })
-                })
-              </script>
+                </script>
+              </li>
+              <li ng-if="!isGuest"><a class="dropdown-button" href="#" data-activates="login">Willy<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
           </div>
         </div>

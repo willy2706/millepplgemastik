@@ -14,5 +14,10 @@ milleRoutes.config(['$stateProvider', '$urlRouterProvider',
         templateUrl: 'app/partials/product.html',
         controller: ''
       })
+      .state('homepage', {
+        url: '/homepage',
+        templateUrl: 'app/partials/homepage.html',
+        controller: ''
+      })
   }
 ]);
