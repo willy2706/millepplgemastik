@@ -51,11 +51,11 @@
       <nav>
         <div class="container">
           <div class="nav-wrapper">
-            <a href="/" class="brand-logo">Logo</a>
+            <a ui-sref="homepage" class="brand-logo">Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="#">Home</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#team">The Team</a></li>
+              <li><a ui-sref="homepage">Home</a></li>
+              <li><a ui-sref="homepage_features">Features</a></li>
+              <li><a ui-sref="homepage_theteam">The Team</a></li>
               <li ng-if="isGuest">
                 <a class="dropdown-button" href="#" data-activates="login">Log In<i class="material-icons right">arrow_drop_down</i></a>
                 <script type="text/javascript">
@@ -137,6 +137,7 @@
         </li>
       </ul>
     </div>
+
     <div ui-view></div>
 
     <div class="container">

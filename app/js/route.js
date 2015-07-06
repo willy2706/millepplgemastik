@@ -2,21 +2,36 @@ var milleRoutes = angular.module('milleApp.routes', []);
 
 milleRoutes.config(['$stateProvider', '$urlRouterProvider', 
   function($stateProvider, $urlRouterProvider, $scope) {
-    // $urlRouterProvider.when('', '/')
+  //
+  // For any unmatched url, redirect to /state1
+  $urlRouterProvider.otherwise("/homepage");
+  //
+  // Now set up the states
     $stateProvider
-      .state('product-add', {
-        url: '/product-add',
-        templateUrl: 'app/partials/product-add.html',
-        controller: ''
-      })
-      .state('product', {
-        url: '/product',
-        templateUrl: 'app/partials/product.html',
-        controller: ''
-      })
       .state('homepage', {
         url: '/homepage',
         templateUrl: 'app/partials/homepage.html',
+        controller: ''
+      })
+      .state('homepage_features', {
+        url: '/homepage#features',
+        templateUrl: 'app/partials/homepage.html',
+        controller: ''
+      })
+      .state('homepage_theteam', {
+        url: '/homepage#theteam',
+        templateUrl: 'app/partials/homepage.html',
+        controller: ''
+      })
+
+      .state('products_index', {
+        url: '/products',
+        templateUrl: 'app/partials/products.index.html',
+        controller: ''
+      })
+      .state('products_add', {
+        url: '/products/add',
+        templateUrl: 'app/partials/products.add.html',
         controller: ''
       })
   }
