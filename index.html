@@ -52,60 +52,64 @@
         <div class="container">
           <div class="nav-wrapper">
             <a ui-sref="homepage" class="brand-logo">Eazell</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <ul ng-if="isGuest" id="nav-mobile" class="right hide-on-med-and-down">
               <li><a ui-sref="homepage">Home</a></li>
               <li><a ui-sref="homepage_features">Features</a></li>
               <li><a ui-sref="homepage_theteam">The Team</a></li>
-              <li ng-if="isGuest">
-                <a class="dropdown-button" href="#" data-activates="login">Log In<i class="material-icons right">arrow_drop_down</i></a>
-                <script type="text/javascript">
-                  $(function () {
-                    $('.dropdown-button').hover(function() {
-                      $('.login-banner').show()
-                    }, function () {
-                      $('.login-banner').hide()
-                    })
-                    $('.login-banner').hover(function () {
-                      $('.login-banner').show()
-                    }, function () {
-                      $('.login-banner').hide()
-                    })
-                  })
-                </script>
+              <li>
+                <a class="modal-trigger" href="#modal_signin">Sign In</a>
               </li>
-              <li ng-if="!isGuest"><a class="dropdown-button" href="#" data-activates="login">Willy<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            <ul ng-if="!isGuest" id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a ui-sref="homepage">Dashboard</a></li>
+              <li><a ui-sref="products_index">Products</a></li>
+              <li><a ui-sref="categories_index">Categories</a></li>
+              <li>
+                <a class="dropdown-button" href="#" data-activates="dropdown_settings">Hello, Christ<i class="material-icons right">arrow_drop_down</i></a>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
 
-    <div class="row login-banner">
-      <form class="col s12 l6 offset-l6">
+    <ul id='dropdown_settings' class='dropdown-content'>
+      <li><a href="#!">Settings</a></li>
+      <li><a ui-sref="homepage">Sign Out</a></li>
+    </ul>
+
+    <div id="modal_signin" class="modal">
+      <div class="modal-content">
+        <h4>Sign In</h4>
         <div class="row">
-          <div class="input-field col s12">
-            <input id="username" type="text" class="validate">
-            <label for="username">Username</label>
-          </div>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="username" type="text" class="validate">
+                <label for="username">Username</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <button class="btn waves-effect waves-light teal" type="submit" name="action">Log In</button>
+              </div>
+              <div class="col s6">
+                <input type="checkbox" id="remember_me" checked="checked" />
+                <label for="remember_me">Remember me?</label>
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate">
-            <label for="password">Password</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s6">
-            <button class="btn waves-effect waves-light teal" type="submit" name="action">Log In</button>
-          </div>
-          <div class="col s6">
-            <input type="checkbox" id="remember_me" checked="checked" />
-            <label for="remember_me">Remember me?</label>
-          </div>
-        </div>
-      </form>
+      </div>
     </div>
-    <div class="slider" ng-show = "isGuest">
+
+    <div class="slider" ng-show="isGuest">
       <ul class="slides">
         <li>
           <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
@@ -140,7 +144,7 @@
 
     <div ui-view></div>
 
-    <div class="container">
+    <div class="container" ng-if="isGuest">
         <section id="features">
             <div class="row center">
                 <div class="col s12 m4">
@@ -237,6 +241,9 @@
     <script>
       $(document).ready(function() {
         $('.slider').slider({full_width: true});
+
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
       });
     </script>
   </body>

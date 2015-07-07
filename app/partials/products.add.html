@@ -1,9 +1,14 @@
 <div class="container">
+  <h5>Add New Product</h5>
   <ul class="collapsible" data-collapsible="expandable">
     <li>
       <div class="collapsible-header" id="collapsible_header_information"><i class="material-icons">information</i>Information</div>
       <div class="collapsible-body">
         <div class="row">
+          <div class="input-field col s12">
+            <input id="id" type="text" class="validate">
+            <label for="id">ID</label>
+          </div>
           <div class="input-field col s12">
             <input id="name" type="text" class="validate">
             <label for="name">Name</label>
@@ -148,6 +153,10 @@
     });
     $('select').material_select();
     $('.slider').slider({full_width: true});
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 2 // Creates a dropdown of 15 years to control year
+      });
 
     $('#collapsible_header_information').click();
     $('#collapsible_marketplace').hide();

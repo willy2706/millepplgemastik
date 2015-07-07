@@ -34,5 +34,17 @@ milleRoutes.config(['$stateProvider', '$urlRouterProvider',
         templateUrl: 'app/partials/products.add.html',
         controller: ''
       })
+
+      .state('categories_index', {
+        url: '/categories',
+        templateUrl: 'app/partials/categories.index.html',
+        controller: ''
+      })
+      .state('categories_add', {
+        url: '/categories/add',
+        templateUrl: 'app/partials/categories.add.html',
+        controller: ''
+      })
+
   }
 ]);
