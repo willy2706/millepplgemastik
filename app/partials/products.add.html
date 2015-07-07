@@ -2,29 +2,26 @@
   <h5>Add New Product</h5>
   <ul class="collapsible" data-collapsible="expandable">
     <li>
-      <div class="collapsible-header" id="collapsible_header_information"><i class="material-icons">information</i>Information</div>
+      <div class="collapsible-header"><i class="material-icons">information</i>Information</div>
       <div class="collapsible-body">
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="id" type="text" class="validate">
-            <label for="id">ID</label>
-          </div>
-          <div class="input-field col s12">
-            <input id="name" type="text" class="validate">
-            <label for="name">Name</label>
-          </div>
-          <div class="input-field col s12">
-            <textarea id="short_desc" class="materialize-textarea"></textarea>
-            <label for="short_desc">Short Description</label>
-          </div>
-          <div class="input-field col s12">
-            <textarea id="desc" class="materialize-textarea"></textarea>
-            <label for="desc">Description</label>
-          </div>
-          <div class="col s12">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Save
-              <i class="material-icons">send</i>
-            </button>
+        <div class="container">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="id" type="text" class="validate">
+              <label for="id">ID</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="name" type="text" class="validate">
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="short_desc" class="materialize-textarea"></textarea>
+              <label for="short_desc">Short Description</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="desc" class="materialize-textarea"></textarea>
+              <label for="desc">Description</label>
+            </div>
           </div>
         </div>
       </div>
@@ -33,31 +30,28 @@
     <li>
       <div class="collapsible-header"><i class="material-icons">star_rate</i>Prices</div>
       <div class="collapsible-body">
-        <div class="row">
-          <div class="input-field col s6 m12">
-            <input id="buy_price" type="number" class="validate">
-            <label for="buy_price">Buy Price</label>
-          </div>
-          <div class="input-field col s6 m12">
-            <input id="sell_price" type="number" class="validate">
-            <label for="sell_price">Sell Price</label>
-          </div>
-          <div class="input-field col s12">
-            <input id="sale_price" type="number" class="validate">
-            <label for="sale_price">Sale Price</label>
-          </div>
-          <div class="input-field col s6 m12">
-            <input id="sale_from" type="date" class="datepicker">
-            <label for="sale_from">Sale From</label>
-          </div>
-          <div class="input-field col s6 m12">
-            <input id="sale_until" type="date" class="datepicker">
-            <label for="sale_until">Sale Until</label>
-          </div>
-          <div class="col s12">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Save
-              <i class="material-icons">send</i>
-            </button>
+        <div class="container">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="buy_price" type="number" class="validate">
+              <label for="buy_price">Buy Price</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="sell_price" type="number" class="validate">
+              <label for="sell_price">Sell Price</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="sale_price" type="number" class="validate">
+              <label for="sale_price">Sale Price</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="sale_from" type="date" class="datepicker">
+              <label for="sale_from">Sale From</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="sale_until" type="date" class="datepicker">
+              <label for="sale_until">Sale Until</label>
+            </div>
           </div>
         </div>
       </div>
@@ -66,23 +60,20 @@
     <li>
       <div class="collapsible-header"><i class="material-icons">image</i>Images</div>
       <div class="collapsible-body">
-        <img class="materialboxed" data-caption="Lorem ipsum dolor sit amen" width="250" src="http://lorempixel.com/400/250/fashion/1"/>
-        <img class="materialboxed" data-caption="Lorem ipsum dolor sit amen" width="250" src="http://lorempixel.com/400/250/fashion/2"/>
-        <div class="col s12">
-          <div class="file-field input-field">
-            <div class="btn">
-              <span>Image</span>
-              <input type="file" />
-            </div>
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text" />
+        <div class="container">
+          <img class="materialboxed" data-caption="Lorem ipsum dolor sit amen" width="250" src="http://lorempixel.com/400/250/fashion/1"/>
+          <img class="materialboxed" data-caption="Lorem ipsum dolor sit amen" width="250" src="http://lorempixel.com/400/250/fashion/2"/>
+          <div class="col s12">
+            <div class="file-field input-field">
+              <div class="btn">
+                <span>Image</span>
+                <input type="file" />
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col s12">
-          <button class="btn waves-effect waves-light" type="submit" name="action">Save
-            <i class="material-icons">send</i>
-          </button>
         </div>
       </div>
     </li>
@@ -90,24 +81,28 @@
     <li>
       <div class="collapsible-header"><i class="material-icons">list</i>Others</div>
       <div class="collapsible-body">
-        <div class="row">
-          <div class="input-field col s6 m12">
-            <select>
-              <option value="" disabled selected>Choose one category</option>
-              <option value="tas">Tas</option>
-              <option value="baju">Baju</option>
-              <option value="celana">Celana</option>
-            </select>
-            <label>Category</label>
-          </div>
-          <div class="input-field col s6 m12">
-            <input id="quantity" type="number" class="validate">
-            <label for="quantity">Quantity</label>
-          </div>
-          <div class="col s12">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Save
-              <i class="material-icons">send</i>
-            </button>
+        <div class="container">
+          <div class="row">
+            <div class="input-field col s6">
+              <select>
+                <option value="" disabled selected>Choose one category</option>
+                <option value="tas">Tas</option>
+                <option value="baju">Baju</option>
+                <option value="celana">Celana</option>
+              </select>
+              <label>Category</label>
+            </div>
+            <div class="input-field col s6">
+              <select>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+              </select>
+              <label>Status</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="quantity" type="number" class="validate">
+              <label for="quantity">Quantity</label>
+            </div>
           </div>
         </div>
       </div>
@@ -116,7 +111,7 @@
 
   <div class="row" id="button_save_and_continue">
     <div class="col s12">
-      <button class="btn waves-effect waves-light" type="submit" name="action">Save and Continue
+      <button class="btn waves-effect waves-light" type="submit" name="action">Save
         <i class="material-icons">send</i>
       </button>
     </div>
@@ -126,21 +121,21 @@
     <li>
       <div class="collapsible-header" id="collapsible_header_lazada"><i class="material-icons">done</i>Lazada Indonesia</div>
       <div class="collapsible-body">
-
+        TBD
       </div>
     </li>
 
     <li>
       <div class="collapsible-header"><i class="material-icons">done</i>Tokopedia</div>
       <div class="collapsible-body">
-        
+        TBD
       </div>
     </li>
 
     <li>
       <div class="collapsible-header"><i class="material-icons">done</i>Bukalapak</div>
       <div class="collapsible-body">
-        
+        TBD
       </div>
     </li>
   </ul>
@@ -158,7 +153,6 @@
         selectYears: 2 // Creates a dropdown of 15 years to control year
       });
 
-    $('#collapsible_header_information').click();
     $('#collapsible_marketplace').hide();
     $('#button_save_and_continue').click(function(event) {
       event.preventDefault();
