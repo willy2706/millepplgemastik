@@ -26,6 +26,7 @@
         <td>9</td>
         <td><p class="green-text">Active</p></td>
         <td><a class="waves-effect waves-light btn">Edit</a></td>
+        <td><a data-target="modal1" class="waves-effect waves-light btn modal-trigger">Synchronize</a></td>
       </tr>
       <tr>
         <td>CLN0001</td>
@@ -36,6 +37,7 @@
         <td>9</td>
         <td><p class="red-text">Inactive</p></td>
         <td><a class="waves-effect waves-light btn">Edit</a></td>
+        <td><a class="waves-effect waves-light btn">Synchronize</a></td>
       </tr>
       <tr>
         <td>KMJ0001</td>
@@ -46,7 +48,53 @@
         <td>9</td>
         <td><p class="red-text">Inactive</p></td>
         <td><a class="waves-effect waves-light btn">Edit</a></td>
+        <td><a class="waves-effect waves-light btn">Synchronize</a></td>
       </tr>
     </tbody>
   </table>
+
+  <div class="row">
+    <div class="col s12">
+      <a target="_blank" href="http://demo.prestashop.com/en/?view=back">Reference</a>
+    </div>
+  </div>
 </div>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Synchronize to online shop</h4>
+    <p>
+      <input type="checkbox" checked="checked" />
+      <label>
+        <img style="background-color: #183546; width: 40%;" src="http://srv-live.lazada.co.id/cms/logo-lazada.png">  
+      </label>
+      <br/>
+      <br/>
+      <input type="checkbox" />
+      <label style="width: 181px;height: 31px;overflow: hidden;">
+        <!-- <div > -->
+          <img src="https://ecs1.tokopedia.net/img/newtkpd/dv3-sprite.png">
+        <!-- </div> -->
+      </label> 
+      <br/>
+      <br/>
+      <input type="checkbox" checked="checked" />
+      <label>
+        <img src="https://s1.bukalapak.com/images/bukalapak_logo.png"  style="width: 107px;">
+      </label> 
+      <br/>
+    </p>
+  </div>
+  <div class="modal-footer"><!-- 
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a> -->
+  </div>
+</div>
+
+<script type="text/javascript">
+   $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+</script>
+          

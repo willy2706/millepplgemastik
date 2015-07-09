@@ -46,5 +46,10 @@ milleRoutes.config(['$stateProvider', '$urlRouterProvider',
         controller: ''
       })
 
+      .state('products_detail', {
+        url: '/products/detail',
+        templateUrl: 'app/partials/products.detail.html',
+        controller: ''
+      })
   }
 ]);
