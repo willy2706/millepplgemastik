@@ -6,8 +6,8 @@ var path = require('path');
 var connectionString = require(path.join(__dirname, '../', 'config'));
 
 // Get all products
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/', function(req, res, next) { // next is optional
+
 });
 
 // Get a product
