@@ -4,7 +4,7 @@ milleRoutes.config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider, $scope) {
   //
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/homepage");
+  $urlRouterProvider.otherwise("/");
   //
   // Now set up the states
     $stateProvider
@@ -23,7 +23,6 @@ milleRoutes.config(['$stateProvider', '$urlRouterProvider',
         templateUrl: 'app/partials/homepage.html',
         controller: ''
       })
-
       .state('products_index', {
         url: '/products',
         templateUrl: 'app/partials/products.index.html',
